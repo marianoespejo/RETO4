@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mapa de Museos</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Leaflet CSS -->
+ 
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <!-- Leaflet JS -->
+ 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
   <h1>Mapa de Museos</h1>
   
-  <!-- Botón para encontrar el museo más cercano -->
+
   <button id="btnMasCercano" class="btn">📍 Encontrar Museo Más Cercano</button>
   
-  <!-- Selector para filtrar museos -->
+
   <label for="categoriaFiltro">Filtrar por categoría:</label>
   <select id="categoriaFiltro">
       <option value="todos">Todos</option>
@@ -27,10 +27,8 @@
   </select>
   <button id="btnFiltrar" class="btn">Filtrar</button>
 
-  <!-- Botón para agregar un museo -->
   <button id="btnAgregar" class="btn">➕ Agregar Museo</button>
   
-  <!-- Mapa -->
   <div id="map"></div>
 
   <script src="main.js"></script>

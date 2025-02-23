@@ -6,13 +6,12 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// Middleware
+
 app.use(cors());
 app.use(bodyParser.json());
-// Servir archivos estáticos desde "public"
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Datos en memoria: 30 museos/lugares culturales importantes
 let museos = [
   { id: 1,  titulo: "Museo del Louvre (París, Francia)",              categoria: "Arte",    lat: 48.8606,  lng: 2.3376,   descripcion: "El museo más visitado del mundo, con una colección única de arte y antigüedades." },
   { id: 2,  titulo: "Museo del Prado (Madrid, España)",                 categoria: "Arte",    lat: 40.4138,  lng: -3.6921,  descripcion: "Uno de los museos de arte clásicos más importantes, con obras de Velázquez, Goya, entre otros." },
@@ -46,7 +45,6 @@ let museos = [
   { id: 30, titulo: "National Gallery of Art (Washington, EE.UU.)",  categoria: "Arte",    lat: 38.8913,  lng: -77.0199, descripcion: "Museo nacional de arte con una amplia colección de obras maestras." }
 ];
 
-// Rutas de la API
 app.get('/museos', (req, res) => {
   res.json(museos);
 });
